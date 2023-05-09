@@ -37,7 +37,8 @@ public class Respuesta {
         //TODO: parse JSON and add data to the list.
         JsonElement jsonElement = JsonParser.parseString(this.datos);
 
-        JsonArray jsonLista = jsonElement.getAsJsonObject().get("data").getAsJsonArray();
+        JsonObject jso = jsonElement.getAsJsonObject().get("dataset").getAsJsonObject();
+        JsonArray jsonLista = jso.get("data").getAsJsonArray();
 
         for(int i = 0;i<jsonLista.size();i++) {
             dataList.add(new Price(jsonLista.get(i).getAsJsonArray().get(0).getAsJsonPrimitive().getAsString(),jsonLista.get(i).getAsJsonArray().get(1).getAsJsonPrimitive().getAsString()));
