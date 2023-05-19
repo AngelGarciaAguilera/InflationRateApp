@@ -46,7 +46,16 @@ public class MainActivity extends AppCompatActivity {
         generar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Getting data from Nasdaq Servers...", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Obteniendo los datos de Nasdaq Servers...", Toast.LENGTH_LONG).show();
+                MainController.getSingleton().requestDataFromNasdaq();
+            }
+        });
+
+        Button grafica = (Button) findViewById(R.id.b_getGraphic);
+        generar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Obteniendo los datos de Nasdaq Servers...", Toast.LENGTH_LONG).show();
                 MainController.getSingleton().requestDataFromNasdaq();
             }
         });
@@ -66,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         }
         mAdapter.notifyDataSetChanged();
         TextView tv = (TextView) findViewById(R.id.tv_oilDesc);
-        tv.setText("Nasdaq Oil Prices: 30 rows");
+        tv.setText("Inflation Rate ALEMANIA: 100 rows");
     }
 
     public void errorData(String error) {

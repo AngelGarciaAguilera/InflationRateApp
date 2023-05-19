@@ -6,7 +6,7 @@ import java.util.List;
 public class MainController {
 
     //SINGLETON Controller
-    private static final String DATA_URL = "https://data.nasdaq.com/api/v3/datasets/OPEC/ORB.json?rows=30";
+    private static final String DATA_URL = "https://data.nasdaq.com/api/v3/datasets/RATEINF/CPI_DEU.json?rows=100";
     private static MainController mySingleController;
 
     private List<Price> dataRequested;

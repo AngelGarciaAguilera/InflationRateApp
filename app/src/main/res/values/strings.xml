@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">Nasdaq Oil Prices</string>
+    <string name="app_name">Inflation Rate</string>
+    <string name="load">Cargar Datos</string>
+    <string name="graphic">Cargar Gráfica</string>
+    <string name="titulo">Índice de Precios al Consumidor</string>
 
-    
 
 </resources>
